@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { LayoutModule } from '@angular/cdk/layout';
 
 //Modulos de Material
 import { MatButtonModule } from '@angular/material/button';
@@ -14,6 +15,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 
 const materialModules = [
+  LayoutModule,
   MatInputModule,
   MatFormFieldModule,
   MatDialogModule,

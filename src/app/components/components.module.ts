@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { LayoutModule } from '@angular/cdk/layout';
 import { FormsModule } from '@angular/forms';
 
 //Modulos Importados
@@ -23,7 +22,6 @@ import { NavigationComponent } from './navigation/navigation.component';
     CommonModule,
     FormsModule,
     RouterOutlet,
-    LayoutModule,
     MaterialModule,
     PagesModule,
   ],
