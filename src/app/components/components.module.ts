@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { DialogDeporteComponent } from './dialog-deporte/dialog-deporte.component';
+import { PagesModule } from '../pages/pages.module';
+
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
@@ -11,12 +16,19 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
-import { RouterOutlet } from '@angular/router';
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
 @NgModule({
-  declarations: [DashboardComponent, NavigationComponent],
+  declarations: [
+    DashboardComponent,
+    NavigationComponent,
+    DialogDeporteComponent,
+  ],
   imports: [
     CommonModule,
+    FormsModule,
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
@@ -27,7 +39,11 @@ import { RouterOutlet } from '@angular/router';
     MatSidenavModule,
     MatListModule,
     RouterOutlet,
+    PagesModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
-  exports: [NavigationComponent],
+  exports: [NavigationComponent, DialogDeporteComponent],
 })
 export class ComponentsModule {}
