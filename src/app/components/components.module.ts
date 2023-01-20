@@ -1,25 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { LayoutModule } from '@angular/cdk/layout';
+import { FormsModule } from '@angular/forms';
 
+//Modulos Importados
+import { PagesModule } from '../pages/pages.module';
+import { MaterialModule } from '../material/material.module';
+
+//Componentes
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DialogDeporteComponent } from './dialog-deporte/dialog-deporte.component';
-import { PagesModule } from '../pages/pages.module';
-
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatCardModule } from '@angular/material/card';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { LayoutModule } from '@angular/cdk/layout';
 import { NavigationComponent } from './navigation/navigation.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule } from '@angular/material/list';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input';
+
 @NgModule({
   declarations: [
     DashboardComponent,
@@ -29,20 +22,10 @@ import { MatInputModule } from '@angular/material/input';
   imports: [
     CommonModule,
     FormsModule,
-    MatGridListModule,
-    MatCardModule,
-    MatMenuModule,
-    MatIconModule,
-    MatButtonModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatListModule,
     RouterOutlet,
+    LayoutModule,
+    MaterialModule,
     PagesModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
   ],
   exports: [NavigationComponent, DialogDeporteComponent],
 })
